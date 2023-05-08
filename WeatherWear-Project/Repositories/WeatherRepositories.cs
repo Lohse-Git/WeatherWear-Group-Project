@@ -9,6 +9,7 @@ namespace WeatherWear_Project.Repositories
 
         public WeatherRepositories() 
         {
+
         }
 
 

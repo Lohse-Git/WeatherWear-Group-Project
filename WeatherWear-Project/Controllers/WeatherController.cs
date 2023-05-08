@@ -14,22 +14,25 @@ namespace WeatherWear_Project.Controllers
 
         {
             weatherrepositories = new WeatherRepositories();
-
-
-
         }
 
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType] (StatusCodes.Status400BadRequest)]
+        [ProducesResponseType](StatusCodes.Status400BadRequest)]
         [HttpGet]
 
         public ActionResult<IEnumerable<ClothingReco>> Index()
-       
-         try
         {
+            try
+            {
+                var list = WeatherRepositories.getAll().ToList();
+                Return OK(list);
+            }
+            catch(ArgumentNullException ex) 
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
-         var list = WeatherRepositories.getAll().ToList();
-        Return OK(list);
 
     }
 }
