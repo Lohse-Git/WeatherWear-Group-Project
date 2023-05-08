@@ -6,6 +6,21 @@
 
         public int TemperatureC { get; set; }
 
+        public int Windspeeds { get; set; }
+
+
+          
+
+        
+
+        
+
+
+        
+
+
+
+
         public string? Summary { get; set; }
 
         public override string ToString()
