@@ -18,8 +18,5 @@ namespace WeatherWear_Project.Repositories
             if (clothingReco == null || clothingReco.Count() <= 0) throw new ArgumentNullException("No Weather Records found");
             return clothingReco;
         }
-
-
-
     }
 }
