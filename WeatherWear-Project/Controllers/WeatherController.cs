@@ -20,7 +20,7 @@ namespace WeatherWear_Project.Controllers
         [ProducesResponseType](StatusCodes.Status400BadRequest)]
         [HttpGet]
 
-        public ActionResult<IEnumerable<ClothingReco>> Index()
+        public ActionResult<IEnumerable<Models.TempData>> Index()
         {
             try
             {
